@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PuntoDeVenta</string>
+    <string name="Titulo">Punto de venta CM</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="abrir_nav">Abrir cajon de navegacion</string>
+    <string name="cerrar_nav">Cerrar cajon de navegacion</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cerrar_info">Cerrar</string>
+</resources>
