@@ -15,6 +15,7 @@ import com.uacm.cm.puntodeventa.modelo.Producto;
 import java.util.ArrayList;
 import java.util.List;
 
+//Adaptador que realiza las funciones del recycler view del fragemnt productos
 public class AdaptadorVerProductos extends RecyclerView.Adapter<AdaptadorVerProductos.ViewHolder> implements Filterable {
     private ArrayList<Producto> productos;       // Lista original de productos
     private ArrayList<Producto> filtroProductos; // Lista filtrada de productos
@@ -111,7 +112,7 @@ public class AdaptadorVerProductos extends RecyclerView.Adapter<AdaptadorVerProd
         }
     }
 
-    // Implementación del filtrado
+    // Implementacion del filtrado
     @Override
     public Filter getFilter() {
         return itemFilter;

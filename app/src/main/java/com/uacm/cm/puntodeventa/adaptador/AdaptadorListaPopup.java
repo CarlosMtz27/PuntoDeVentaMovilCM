@@ -10,6 +10,7 @@ import com.uacm.cm.puntodeventa.R;
 import com.uacm.cm.puntodeventa.modelo.Producto;
 import java.util.ArrayList;
 
+//Este adaptador realiza las funcionalidades del recyclerView de mi Pop up de prodctos
 public class AdaptadorListaPopup extends RecyclerView.Adapter<AdaptadorListaPopup.ViewHolder> {
 
     private ArrayList<Producto> productos;

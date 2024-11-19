@@ -16,6 +16,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
+//Este adaptador realiza las funcionalidades del recyclerview del fragmento de ventas
 public class AdaptadorVentas extends RecyclerView.Adapter<AdaptadorVentas.ViewHolderDatos> {
 
     ArrayList<Venta> ventas;
@@ -26,6 +27,7 @@ public class AdaptadorVentas extends RecyclerView.Adapter<AdaptadorVentas.ViewHo
         this.ventas = ventas;
     }
 
+    //Nos ayuda cuando seleccionamos un elemento de la lisya
     public interface OnItemClickListener{
         void onItemClick(int posicion);
     }
@@ -37,6 +39,7 @@ public class AdaptadorVentas extends RecyclerView.Adapter<AdaptadorVentas.ViewHo
         return new ViewHolderDatos(view, listener);
     }
 
+    //Aqui se realizan los cambios de la posicion y de la seleccion de los elemntos
     @Override
     public void onBindViewHolder(@NonNull ViewHolderDatos holder, int position) {
         Venta venta = ventas.get(position);

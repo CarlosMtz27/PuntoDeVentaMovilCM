@@ -66,6 +66,7 @@ public class DetalleVentaDao {
         return productos;
     }
 
+    //Metodo para obtener los productoas mas vendidos
     public ArrayList<ProductoDato> obtenerProductosMasVendidos(){
         ArrayList<ProductoDato> productosMasVendidos = new ArrayList<>();
         Cursor cursor = bd.rawQuery("SELECT p.nombre, SUM(vd.cantidad) AS total_vendido "+

@@ -11,6 +11,7 @@ import com.uacm.cm.puntodeventa.R;
 import com.uacm.cm.puntodeventa.modelo.Producto;
 import java.util.ArrayList;
 
+//Este adaptador realiza las funcionalidades del recycler view de los productos, que se ocupa en el fragment principal
 public class AdaptadorProductos extends RecyclerView.Adapter<AdaptadorProductos.ViewHolderProductos> {
 
     private ArrayList<Producto> productos;

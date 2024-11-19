@@ -61,13 +61,13 @@ public class EstadisticasProductos extends Fragment {
             labels[i] = formatLabel(item.getNombre());
         }
 
-        // Configurar el conjunto de datos
+        // Configuramos el conjunto de datos
         BarDataSet dataSet = new BarDataSet(entries, label);
-        dataSet.setColor(color); // Aplicar el color recibido como parámetro
+        dataSet.setColor(color);//aplicamos el color
         dataSet.setValueTextSize(12f);
         dataSet.setValueTextColor(Color.WHITE);
 
-        // Asignar datos al gráfico
+        // Asignar datos al grafico
         BarData barData = new BarData(dataSet);
         chart.setData(barData);
 
