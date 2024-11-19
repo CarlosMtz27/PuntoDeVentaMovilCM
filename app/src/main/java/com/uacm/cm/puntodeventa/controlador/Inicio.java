@@ -104,15 +104,13 @@ public class Inicio extends AppCompatActivity implements NavigationView.OnNaviga
             navigationView.setCheckedItem(R.id.nav_mis_ventas);
             bottomNavigationView.setSelectedItemId(R.id.btn_ventas);
 
-        } else if (id == R.id.nav_about || id == R.id.btn_acerca_de) {
+        } else if (id == R.id.nav_about) {
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.frame_layout, new AcercaDeFragment())
                     .commit();
             drawerLayout.closeDrawer(GravityCompat.START);
             NavigationView navigationView = findViewById(R.id.nav_view);
             navigationView.setCheckedItem(R.id.nav_about);
-            bottomNavigationView.setSelectedItemId(R.id.btn_acerca_de);
-
         }  else if (id == R.id.home || id == R.id.btn_inicio) {
             InicioFragment inicioFragment = new InicioFragment();
             Bundle bundle = new Bundle();

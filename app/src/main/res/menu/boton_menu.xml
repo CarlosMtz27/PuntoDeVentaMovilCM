@@ -17,11 +17,6 @@
         />
 
     <item
-        android:id="@+id/btn_acerca_de"
-        android:title="Acerca De"
-        android:icon="@drawable/baseline_info_outline_24" />
-
-    <item
         android:id="@+id/btn_estadistica"
         android:title="Estadisticas"
         android:icon="@drawable/baseline_auto_graph_24" />
