@@ -110,7 +110,6 @@ public class VentasFragment extends Fragment {
                         // Mostrar el popup
                         dialogoPop.show();
                     } else {
-                        // Manejar el caso donde no hay venta seleccionada
                         MotionToast.Companion.createColorToast(getActivity(),"INFO","Seleccione un elemento primero",
                                 MotionToastStyle.WARNING,
                                 MotionToast.GRAVITY_BOTTOM,

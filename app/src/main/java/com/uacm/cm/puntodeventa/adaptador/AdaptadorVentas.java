@@ -92,7 +92,7 @@ public class AdaptadorVentas extends RecyclerView.Adapter<AdaptadorVentas.ViewHo
         }
 
         public String formatoFecha(Date fechaVenta){
-            fechaVenta = new Date();
+
             SimpleDateFormat formatoFecha = new SimpleDateFormat("dd/MM/yyyy");
             String fechaFormateada = formatoFecha.format(fechaVenta);
             return fechaFormateada;

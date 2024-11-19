@@ -4,6 +4,8 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+
+import com.uacm.cm.puntodeventa.modelo.ProductoDato;
 import com.uacm.cm.puntodeventa.modelo.Usuario;
 import com.uacm.cm.puntodeventa.modelo.Venta;
 import java.text.ParseException;
@@ -73,5 +75,24 @@ public class VentaDao {
         }
         cursor.close();
         return ventas;
+    }
+
+
+    public ArrayList<ProductoDato> obtenerVentasPorDia() {
+        ArrayList<ProductoDato> ventasPorDia = new ArrayList<>();
+        Cursor cursor = bd.rawQuery("SELECT fecha_venta, SUM(monto) AS total_venta " +
+                "FROM ventas " +
+                "GROUP BY fecha_venta " +
+                "ORDER BY fecha_venta ASC LIMIT 5", null);
+        if (cursor.moveToFirst()) {
+            do {
+                String fecha = cursor.getString(cursor.getColumnIndexOrThrow("fecha_venta"));
+                float totalVenta = cursor.getFloat(cursor.getColumnIndexOrThrow("total_venta"));
+                ventasPorDia.add(new ProductoDato(fecha, (int) totalVenta));
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+        bd.close();
+        return ventasPorDia;
     }
 }

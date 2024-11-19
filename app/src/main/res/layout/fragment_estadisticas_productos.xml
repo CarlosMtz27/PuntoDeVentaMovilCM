@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp" android:layout_width="match_parent">
+    android:padding="12dp" android:layout_width="match_parent">
     <TextView
         android:id="@+id/tituloGrafica"
         android:layout_width="wrap_content"
@@ -10,9 +10,23 @@
         android:layout_gravity="center"
         android:text="Productos Más Vendidos"
         android:textColor="#000"
-        android:textSize="18sp" />
+        android:textSize="15sp" />
     <com.github.mikephil.charting.charts.BarChart
         android:id="@+id/barChart"
         android:layout_width="match_parent"
-        android:layout_height="300dp" />
+        android:layout_height="280dp" />
+
+    <TextView
+        android:id="@+id/tituloGrafica2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Dias con mas venta"
+        android:textColor="#000"
+        android:textSize="15sp" />
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/barChartDias"
+        android:layout_width="match_parent"
+        android:layout_height="280dp" />
 </LinearLayout>
